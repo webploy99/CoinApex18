@@ -5,6 +5,19 @@
     background-repeat: no-repeat;
 }
 
+.box {
+    animation: popup 0.4s;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .style1 {
     border-color: rgb(0,182,140); /* Solid border color fallback */
     border-color: linear-gradient(180deg, rgba(0,182,140,1) 0%, rgba(1,142,115,1) 35%, rgba(2,63,65,1) 100%);

@@ -30,13 +30,13 @@
         /></noscript>
         <!-- End Meta Pixel Code -->
 </head>
-<body class="">
+<body>
     <div class=" text-white">
-        <header class="bg-[#01161e] fixed top-0 w-full z-50 shadow shadow-slate-700">
+        <header class="bg-[#01161e] lg:fixed top-0 w-full z-50 shadow shadow-slate-700">
             <section class="max-w-[1280px] mx-auto flex justify-between items-center p-3">
                 <h2 class=" font-bold tracking-wider text-3xl text-[#4AE3B4]">XPoinCoin</h2>
                 <div class="flex items-center text-lg font-semibold tracking-wide">
-                    <button onclick="url()" class="bg-green-500 px-6 py-2 hover:bg-green-600 rounded-full shadow border border-gray-600">
+                    <button onclick="ShowPopUp1()" class="bg-green-500 px-6 py-2 hover:bg-green-600 rounded-full shadow border border-gray-600">
                         Join Group Now
                     </button>
                 </div>
@@ -112,11 +112,13 @@
 
             <section class="bg-[#0D192F] px-4 lg:px-4 xl:px-8 2xl:px-0">
                 <div class="max-w-[1280px] mx-auto xl:flex items-center xl:space-x-8 py-14">
-                    <div class="xl:w-[50%] flex justify-center xl:justify-normal">
-                        <img src="./Assets/4.png" alt="">
+                    <div class="xl:w-[50%] flex justify-center justify-center">
+                        <video loop autoplay controls autobuffer playsinline class="sm:w-8/12">
+                            <source src="./Assets/video.mp4" type="video/mp4" />
+                        </video>
                     </div>
                     
-                    <div class=" space-y-8 xl:w-[50%]">
+                    <div class=" space-y-8 xl:w-[50%] sm:mt-10">
                         <div class="flex items-center space-x-2">
                             <p class=" text-[#4AE3B4]">
                                 What is XPoinCoin? 
@@ -613,7 +615,7 @@
             </div>
         </section>
         <div class="fixed bottom-0 md:relative w-full bg-[#0D192F] font-semibold text-xl flex justify-center items-center p-5">
-            <button onclick="url()"class="bg-green-500 px-6 sm:px-8 py-2 sm:py-3 hover:bg-green-600 rounded-full shadow border border-gray-600">
+            <button onclick="ShowPopUp1()"class="bg-green-500 px-6 sm:px-8 py-2 sm:py-3 hover:bg-green-600 rounded-full shadow border border-gray-600">
             Join Group Now</button>
         </div>
 
@@ -718,6 +720,42 @@
             </div>       
         </footer>
     </div>
+    <!-- popup1 -->
+    <div class="popup1 w-full h-screen bg-[#0a0908]/65 hidden justify-center items-center fixed top-0 left-0 p-3" id="PopUp1">
+        <div class="box max-w-[668px] w-full bg-white p-6 sm:px-8 rounded-lg relative">
+            <button class="absolute top-3 right-3 text-red-600 text-2xl"><ion-icon onclick="HidePopUp()" name="close" class="border border-white shadow"></ion-icon></button>
+            <div class="text-lg text-gray-700 py-5 font-[500] flex gap-1">
+                <div><ion-icon name="arrow-redo" class="text-xl text-[#fcbf49] mt-1"></ion-icon></div>
+                <p>Only for cryptocurrency investors, because our discussion cryptocurrency group is a high -end investor  share group, investors who have not registered cryptocurrency wallets don't enter please</p>
+            </div>
+            <div class="flex justify-between items-center tracking-wider text-lg text-white font-semibold *:text-center gap-4 *:w-full *:text-md *:py-2.5 *:rounded-lg  *:cursor-pointe">
+                <button onClick="ShowPopUp2()" class="bg-[#fcbf49]">
+                    Yes
+                </button>
+                <button onclick="amazonUrl()" class="bg-red-500">
+                    No
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup2 -->
+    <div class="popup2 w-full h-screen bg-[#00000056] hidden justify-center items-center fixed top-0 left-0 p-3" id="PopUp2">
+        <div class="box max-w-[668px] w-full bg-white p-6 sm:px-8 rounded-lg relative">
+            <button class="absolute top-3 right-3 text-red-600 text-2xl"><ion-icon onclick="HidePopUp()" name="close" class="border border-white shadow"></ion-icon></button>
+            <div class="text-lg text-gray-700 py-5 font-[500] flex gap-1">
+                <div><ion-icon name="arrow-redo" class="text-xl text-[#fcbf49] mt-1"></ion-icon></div>
+                <p>After joining the discussion group, please take the initiative to contact the assistant for free cryptocurrency trading strategies and market updates</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center tracking-wider text-white font-semibold *:text-center gap-5 sm:gap-4 *:w-full text-lg *:py-2.5 *:rounded-lg  *:cursor-pointer">
+                <button onclick="url()" class="bg-[#fcbf49]">
+                    Yes, I want to join the group
+                </button>
+                <button onclick="amazonUrl()" class="bg-red-500">
+                    Sorry, I'm not interested in this
+                </button>
+            </div>
+        </div>
     <script src="./script.js">
         
     </script>
